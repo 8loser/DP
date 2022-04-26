@@ -14,7 +14,7 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
     /**
      * 建構式 new CurrentConditionsDisplay() 後執行
      *
-     * @param weatherData
+     * @param weatherData 氣象資料 Subject
      */
     public CurrentConditionsDisplay(Subject weatherData) {
         // 使用依賴注入, Subject 由外部提供
@@ -33,13 +33,14 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement {
         System.out.println("濕度: " + humidity + " %");
     }
 
+
     /**
      * 每個 Observer 都要實踐 update
      * 不同的佈告欄需要的資料不一樣
      *
-     * @param temperature
-     * @param humidity
-     * @param pressure
+     * @param temperature 溫度
+     * @param humidity    濕度
+     * @param pressure    壓力
      */
     @Override
     public void update(float temperature, float humidity, float pressure) {
