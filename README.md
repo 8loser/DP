@@ -10,9 +10,10 @@ code: [Duck](/src/main/java/com/example/dp/duck)
 
 ## 觀察者模式 ()
 
-code: [weather](/src/main/java/com/example/dp/weather)
+code: [Weather](/src/main/java/com/example/dp/weather)
 
-- subject, observer 可以用 abstract 嗎?
+- subject, observer 都是 interface
+- observer 透過 subject interface 執行註冊, subject 透過 observer interface 觸發更新
 
 ## Note
 
