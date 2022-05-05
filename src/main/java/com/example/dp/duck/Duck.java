@@ -20,7 +20,7 @@ public abstract class Duck {
     QuackBehavior quackBehavior;
 
     public Duck() {
-        
+        // 為什麼要空的建構式
     }
 
     /**

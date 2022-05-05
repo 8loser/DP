@@ -1,6 +1,6 @@
 # Design Pattern
 
-## 策略模式 (Strategy Pattern)
+# 策略模式 (Strategy Pattern)
 
 code: [Duck](/src/main/java/com/example/dp/duck)
 
@@ -16,12 +16,20 @@ code: [Duck](/src/main/java/com/example/dp/duck)
     - [setFlyBehavior](/src/main/java/com/example/dp/duck/Duck.java#L52)
     - [setQuackBehavior](/src/main/java/com/example/dp/duck/Duck.java#L56)
 
-## 觀察者模式 ()
+# 觀察者模式 (Observer Pattern)
 
 code: [Weather](/src/main/java/com/example/dp/weather)
 
 - subject, observer 都是 interface
 - observer 透過 subject interface 執行註冊, subject 透過 observer interface 觸發更新
+
+# 裝飾者模式 (Decorator Pattern)
+
+code: [Weather](/src/main/java/com/example/dp/beverage)
+
+- 使用繼承使型態相符
+- java.io 屬於裝飾者模式
+- 缺點: 會有大量的類別(裝飾者)
 
 ## Note
 
