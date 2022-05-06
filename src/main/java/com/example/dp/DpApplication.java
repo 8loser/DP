@@ -1,9 +1,9 @@
 package com.example.dp;
 
-import com.example.dp.beverage.Beverage;
-import com.example.dp.beverage.Espresso;
-import com.example.dp.beverage.HouseBlend;
-import com.example.dp.beverage.Mocha;
+import com.example.dp.pizza.ChicagoStylePizzaStore;
+import com.example.dp.pizza.NYStylePizzaStore;
+import com.example.dp.pizza.Pizza;
+import com.example.dp.pizza.PizzaStore;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -25,14 +25,22 @@ public class DpApplication {
 //        weatherData.setMeasurements(80, 65, 30.4f);
 //        -----------
 //        Beverage
-        Beverage beverage = new Espresso();
-        System.out.println(beverage.getDescription() + ", " + beverage.cost());
-
-        Beverage beverage2 = new HouseBlend();
-        System.out.println(beverage2.getDescription() + "," + beverage2.cost());
-        beverage2 = new Mocha(beverage2);
-        System.out.println(beverage2.getDescription() + "," + beverage2.cost());
-        beverage2 = new Mocha(beverage2);
-        System.out.println(beverage2.getDescription() + "," + beverage2.cost());
+//        Beverage beverage = new Espresso();
+//        System.out.println(beverage.getDescription() + ", " + beverage.cost());
+//
+//        Beverage beverage2 = new HouseBlend();
+//        System.out.println(beverage2.getDescription() + "," + beverage2.cost());
+//        beverage2 = new Mocha(beverage2);
+//        System.out.println(beverage2.getDescription() + "," + beverage2.cost());
+//        beverage2 = new Mocha(beverage2);
+//        System.out.println(beverage2.getDescription() + "," + beverage2.cost());
+//        -----------
+//        Pizza
+        PizzaStore nyStore = new NYStylePizzaStore();
+        PizzaStore chicagoStore = new ChicagoStylePizzaStore();
+        Pizza pizza = nyStore.orderPizza("cheese");
+        System.out.println(pizza.getName());
+        pizza = chicagoStore.orderPizza("cheese");
+        System.out.println(pizza.getName());
     }
 }

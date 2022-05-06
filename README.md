@@ -31,6 +31,23 @@ code: [Weather](/src/main/java/com/example/dp/beverage)
 - java.io 屬於裝飾者模式
 - 缺點: 會有大量的類別(裝飾者)
 
+# 工廠模式 (Factory Pattern)
+
+- 確認哪些會改變, 哪些不會改變
+    - 會改變: pizza 種類、口味 (開放新增, 不用管加了什麼在 pizza 上)
+    - 不會改變: 餅皮製作、烘烤、切片、裝盒 (封閉修改)
+- 抽象工廠 [PizzaStore](/src/main/java/com/example/dp/pizza/PizzaStore.java)
+- 抽象產品 [Pizza](/src/main/java/com/example/dp/pizza/Pizza.java)
+- 透過子類別實體化產品
+    - [NYStylePizzaStore](/src/main/java/com/example/dp/pizza/NYStylePizzaStore.java)
+    - [ChicagoStylePizzaStore](/src/main/java/com/example/dp/pizza/ChicagoStylePizzaStore.java)
+- 選擇了子類別，相當於選擇了產品類型
+- 鬆綁 (decouple)
+    - 父類別 [PizzaStore](/src/main/java/com/example/dp/pizza/PizzaStore.java)
+      與子類別 [NYStylePizzaStore](/src/main/java/com/example/dp/pizza/NYStylePizzaStore.java)
+      , [ChicagoStylePizzaStore](/src/main/java/com/example/dp/pizza/ChicagoStylePizzaStore.java) 的關係鬆綁
+    - [PizzaStore.orderPizza()](/src/main/java/com/example/dp/pizza/PizzaStore.java#L27) 不用知道在處理哪種 pizza, 只負責執行
+
 ## Note
 
 - @override 可寫可不寫, JVM 會自動判斷, 有寫的話 IDE 會協助驗證
