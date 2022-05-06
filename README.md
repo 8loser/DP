@@ -33,6 +33,8 @@ code: [Weather](/src/main/java/com/example/dp/beverage)
 
 # 工廠模式 (Factory Pattern)
 
+code: [Pizza](/src/main/java/com/example/dp/pizza)
+
 - 確認哪些會改變, 哪些不會改變
     - 會改變: pizza 種類、口味 (開放新增, 不用管加了什麼在 pizza 上)
     - 不會改變: 餅皮製作、烘烤、切片、裝盒 (封閉修改)
